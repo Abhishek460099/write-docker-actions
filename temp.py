@@ -38,11 +38,11 @@ print(df.describe())
 print(df.dtypes)
 plt.figure(figsize=[15,21])
 for i in range(1,df.shape[1]):
-    plt.subplots(5,4,i)
+    plt.subplots(5,4)
     plt.hist(df.columns[i])
  
 danceable=list()
-column= df['danceability']
+column=df['danceability']
 for index, item in enumerate(column.values):
    if(item>=0.0 and item <=0.25): danceable.append('least')
    if(item > 0.25 and item <= 0.50): danceable.append('medium')
